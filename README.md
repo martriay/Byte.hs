@@ -1,7 +1,7 @@
 Byte.hs
 =======
 
-Byte type and bitwise operations in haskell. Includes the following operations: `andB`, `orB`, `xorB`, `rightB` and `leftB`.
+Byte type and bitwise operations in haskell. Includes the following operations: `andB`, `orB`, `xorB`, `reverseB`, `rightB` and `leftB`.
 
 ```haskell
 Prelude> :l Byte.hs 
@@ -18,4 +18,6 @@ By U U U C C C C U
 By U U U U C C C C
 *Byte> rightB a
 By C U U U U C C C
+*Byte> reverseB b
+By U C C C U C C C
 ```

@@ -1,4 +1,4 @@
-module Byte (byte, rightB, leftB, andB, orB, xorB) where
+module Byte (byte, rightB, leftB, andB, orB, xorB, reverseB) where
 
 import Bit
 
@@ -21,6 +21,9 @@ orB = operatorB (\x y -> x + y > 0)
 
 xorB :: Byte -> Byte -> Byte
 xorB = operatorB (\x y -> x + y == 1)
+
+reverseB :: Byte -> Byte
+reverseB (By a b c d e f g h) = By h g f e d c b a
 
 operatorB :: (Int -> Int -> Bool) -> Byte -> Byte -> Byte
 operatorB condition (By a b c d e f g h) (By a2 b2 c2 d2 e2 f2 g2 h2) =
