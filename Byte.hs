@@ -9,6 +9,7 @@ byte a b c d e f g h = By (bit a) (bit b) (bit c) (bit d) (bit e) (bit f) (bit g
 
 notB :: Byte -> Byte
 notB (By a b c d e f g h) = By (neg a) (neg b) (neg c) (neg d) (neg e) (neg f) (neg g) (neg h)
+
 andB :: Byte -> Byte -> Byte
 andB = operatorB (\x y -> x + y == 2)
 
